@@ -20,7 +20,7 @@
             android:name=".view.DetailActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_home"
-            android:theme="@style/FullscreenTheme">
+            android:theme="@style/AppTheme.NoActionBar">
 
         </activity>
 
