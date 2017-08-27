@@ -7,7 +7,9 @@ package me.stupidme.deer.model;
 public class RecordItem {
     public Long id;
     public boolean hasFinished;
-    public int timeLength;
+    public long startTimeInMills;
+    public long endTimeInMillis;
+    public long timeLengthInMills;
     public long createdTime;
     public long updatedTime;
     public String describe;

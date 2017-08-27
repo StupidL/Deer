@@ -4,8 +4,8 @@ import java.util.List;
 
 import me.stupidme.deer.RecordItemView;
 import me.stupidme.deer.model.RecordItem;
-import me.stupidme.deer.model.RecordItemModel;
-import me.stupidme.deer.model.RecordItemModelImpl;
+import me.stupidme.deer.model.db.RecordManager;
+import me.stupidme.deer.model.db.RecordManagerImpl;
 
 /**
  * Created by allen on 17-8-6.
@@ -15,16 +15,16 @@ public class RecordPresenterImpl implements RecordPresenter {
 
     private RecordItemView mView;
 
-    private RecordItemModel mModel;
+    private RecordManager mRecordManager;
 
     public RecordPresenterImpl(RecordItemView view) {
         mView = view;
-        mModel = new RecordItemModelImpl();
+        mRecordManager = RecordManagerImpl.getInstance();
     }
 
     @Override
     public void loadRecords() {
-        List<RecordItem> items = mModel.queryAllItems();
+        List<RecordItem> items = mRecordManager.queryRecords();
         for (RecordItem item : items)
             mView.addItem(item);
     }

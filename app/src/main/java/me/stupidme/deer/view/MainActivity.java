@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         mFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(MainActivity.this,DetailActivity.class));
             }
         });
 
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
-        mPresenter.loadRecords();
+//        mPresenter.loadRecords();
     }
 
     @Override
